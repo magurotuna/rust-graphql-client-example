@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 graphql_client = "0.8.0"
+serde = "1.0.103"
