@@ -1,0 +1,21 @@
+query PullRequestView($prNumber: Int!) {
+  repository(owner: "Microsoft", name: "TypeScript") {
+    pullRequest(number: $prNumber) {
+      commits(first: 250) {
+        pageInfo {
+          hasNextPage
+        }
+        nodes {
+          commit {
+            author {
+              name
+            }
+            message
+            oid
+            authoredDate
+          }
+        }
+      }
+    }
+  }
+}
